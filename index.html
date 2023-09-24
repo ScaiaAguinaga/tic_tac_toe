@@ -3,14 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <scrtipt src="script.js" defer></scrtipt>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to external CSS stylesheet -->
+    <script src="script.js" defer></script> <!-- Link to external JavaScript file with the "defer" attribute -->
     <title>Document</title>
 </head>
 <body>
-    <div class="board circle" id="board">
-        <div class="cell x" data-cell></div>
-        <div class="cell circle" data-cell></div>
+    <!-- Game Board -->
+    <div class="board" id="board">
+        <!-- Individual Game Cells -->
+        <div class="cell" data-cell></div> <!-- Represents a game cell -->
+        <div class="cell" data-cell></div>
         <div class="cell" data-cell></div>
         <div class="cell" data-cell></div>
         <div class="cell" data-cell></div>
@@ -19,9 +21,13 @@
         <div class="cell" data-cell></div>
         <div class="cell" data-cell></div>
     </div>
+
+    <!-- Winning Message Display -->
     <div class="winning-message" id="winningMessage">
-        <div data-winning-message-text>X wins!</div>
-        <button id="restartButton">Restart</button>
+        <!-- Display Winning Message Text Here -->
+        <div data-winning-message-text></div> <!-- Element to display winning message text -->
+        <!-- Restart Button -->
+        <button id="restartButton">Restart</button> <!-- Button to restart the game -->
     </div>
 </body>
 </html>

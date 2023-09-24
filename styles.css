@@ -1,7 +1,9 @@
+/* Box sizing for all elements */
 *, *::after, *::before {
     box-sizing: border-box;
 }
 
+/* Root variables for cell and mark size */
 :root {
     --cell-size: 100px;
     --mark-size: calc(var(--cell-size) * .9);
@@ -11,8 +13,10 @@ body {
     margin: 0;
 }
 
+/* Styling for the game board */
 /* Creates a 3x3 grid used as board */
 .board {
+    /* Center the board */
     width: 100vw;
     height: 100vh;
     display: grid;
@@ -23,7 +27,7 @@ body {
     grid-template-columns: repeat(3, auto)
 }
 
-/* Sets cell positioning and color on grid */
+/* Styling for individual cells */
 .cell {
     width: var(--cell-size);
     height: var(--cell-size);
@@ -35,7 +39,7 @@ body {
     cursor: pointer;
 }
 
-/* Removes outer border from grid to mimic tic-tac-toe board */
+/* Remove outer borders to mimic tic-tac-toe board */
 /* Top */
 .cell:first-child,
 .cell:nth-child(2),
@@ -129,7 +133,7 @@ body {
     background-color: white;
 }
 
-/* Positions winning display as well as replay button */
+/* Styling for the winning message display */
 .winning-message {
     display: none;
     position: fixed;
@@ -145,7 +149,7 @@ body {
     flex-direction: column;
 }
 
-/* Styles restart button */
+/* Styling for the restart button */
 .winning-message button {
     font-size: 3rem;
     background-color: white;
@@ -161,6 +165,7 @@ body {
     border-color: white;
 }
 
+/* Display the winning message container when the "show" class is applied */
 .winning-message.show {
     display: flex;
 }
