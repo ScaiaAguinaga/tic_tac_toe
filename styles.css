@@ -121,15 +121,15 @@ body {
 /* Sets dimensions of circle mark */
 .cell.circle::before,
 .board.circle  .cell:not(.x):not(.circle):hover::before {
-    width: var(--mark-size);
-    height: var(--mark-size);
+    width: calc(var(--mark-size) * .85);
+    height: calc(var(--mark-size) * .85);
 }
 
 /* Adds white circle to make circle mark hollow */
 .cell.circle::after,
 .board.circle  .cell:not(.x):not(.circle):hover::after {
-    width: calc(var(--mark-size) * .7);
-    height: calc(var(--mark-size) * .7);
+    width: calc(var(--mark-size) * .55);
+    height: calc(var(--mark-size) * .55);
     background-color: white;
 }
 
